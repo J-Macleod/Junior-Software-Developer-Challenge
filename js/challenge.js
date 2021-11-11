@@ -8,7 +8,6 @@ async function getUsers() {
         if (ajaxPosts.readyState == 4) {
             if ( (ajaxPosts.status >= 200 && ajaxPosts.status < 300) || (ajaxPosts.status == 304) ) {
                 let postData = JSON.parse(ajaxPosts.responseText);
-                console.log(postData[0]['body']);
                 let ajaxUsers = new XMLHttpRequest();
                 ajaxUsers.onreadystatechange = function() {
 
